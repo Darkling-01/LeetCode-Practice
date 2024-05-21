@@ -59,6 +59,7 @@ public:
 
 
 // 27. Remove Element
+// Runtime: 0 ms
 
 class Solution {
 public:
@@ -68,6 +69,21 @@ public:
             if(nums[i] != val){
                 nums[index] = nums[i];
                 index++;
+            }
+        }
+        return index;
+    }
+};
+
+// second solution for 27. ^
+// but slower  Runtime: 5 ms
+class Solution {
+public:
+    int removeElement(vector<int>& nums, int val) {
+        int index = 0;
+        for(int i : nums){
+            if(i != val){
+                nums[index++] = i;
             }
         }
         return index;
