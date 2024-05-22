@@ -59,7 +59,6 @@ public:
 
 
 // 27. Remove Element
-// Runtime: 0 ms
 
 class Solution {
 public:
@@ -76,7 +75,7 @@ public:
 };
 
 // second solution for 27. ^
-// but slower  Runtime: 5 ms
+
 class Solution {
 public:
     int removeElement(vector<int>& nums, int val) {
@@ -91,6 +90,19 @@ public:
 };
 
 
+// 344. Reverse String
+// Runtime: 
 
+class Solution {
+public:
+    void reverseString(vector<char>& s) {
+        // two-pointer technique
+        int n = 0;
+        int j = s.size() - 1;
 
+        for(int i = 0; i < j ; ++i, --j){
+            swap(s[i], s[j]);            
+        }
+    }
+};
 
