@@ -17,3 +17,26 @@ public:
 
     }
 };
+
+// 169. Majority Element
+
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+        unordered_map<int, int> hash;
+        int res{0};
+        int majority{0};
+
+        for(int i : nums){
+            hash[i] = 1 + hash[i];
+            if(hash[i] > majority){
+                res = i;
+                majority = hash[res];
+            }
+        }
+
+        return res;
+
+    }
+};
+
